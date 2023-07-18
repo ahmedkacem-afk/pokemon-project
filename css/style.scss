@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Indie+Flower&family=Kaushan+Script&display=swap');
+body{
+   width: 95%;
+   margin-left: 2em;
+   margin-top: 4em;
+
+    
+}
+.pointer-class{
+    cursor: pointer;
+}
+.navbar{
+    .container{
+        background:#000000CF ;
+        padding-top: 1.5em;
+        padding-bottom: 6em;
+        overflow: hidden;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top:12em;
+            background: pink;
+            width: 250%;
+            left: -2em;
+            z-index:10em;
+            
+            height: 100%;
+            transform: rotate(2.5deg);
+            
+        }
+        ul{
+            display: flex;
+            li{
+                list-style:none;
+                position: relative;
+                left:69%;
+                
+                a{
+                    margin-left: 1em;
+                    text-decoration: none;
+                    font-family: 'Indie Flower';
+                    font-size: 48px;
+                }
+                .sign-in{
+                    color: #FFFFFF;
+                }
+                .log-in{
+                    color: #FFFFFF;
+                    background: #117AA9;
+                    border-radius: 30%;
+                    padding-left:.8em ;
+                    padding-right: .8em;
+                    padding-top: .1em;
+                    padding-bottom: .1em;
+                }
+            }
+        }
+
+           
+    }
+}
+.hero{
+    text-align: center;
+    .container{
+    position: relative;
+        background-image: url(../photos/Rectangle\ 3.png);
+        background-size: 156.1%;
+        background-position:5em auto;
+        background-repeat: no-repeat;
+        margin-top: -7.5%;
+
+        z-index: 50;
+
+        text-align: center;
+        padding:14em;
+        li{
+            list-style:none;
+        }
+        .poke-name{
+            
+            background: #89C23FA8;
+            border-radius: 35%;
+            margin-left: 0em;
+            margin-right: 0em;
+            ul{
+                display: grid;
+            }
+            .give-name{
+                display: grid;
+                background:rgba(255, 255, 255, 0.66); 
+                border-radius: 38%;
+                margin-left:10em;
+                margin-bottom:3em ;
+                margin-right: 10em;
+              
+                input{
+                    width: 30%;
+                    text-align: center;
+                    background: rgba(255, 255, 255, 0.3);
+                    position:relative;
+                    left: 16.5em;
+                    top: .4em;
+                    border: none;
+                    &::placeholder{
+                        font-family: 'Imprima';
+                        color: #00000075;
+                    }
+                
+                }
+                button{
+                    width: 10%;
+                    padding:0;
+                    background: none;
+                    border: none;
+                    position: relative;
+                    left:21em;
+                    top:1em;
+                    cursor: pointer;
+                }
+                
+                
+            }
+            h1{
+                color: #000;
+                
+                font-family: 'Indie Flower';
+                font-size: 40px;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+            p{
+                font-family: 'Indie flower';
+                font-size: 16px;
+                font-weight: 500;
+
+            }
+        }
+    }
+}
+.contact{
+   
+    .container{
+        margin-top: -10%;
+        background: #000000CF;
+        overflow: hidden;
+        position: relative;
+        z-index: 4;
+        padding-bottom: 2.1em;
+          
+        &::before{
+            content: "";
+            position: absolute;
+            top:-20em;
+            background: pink;
+            width: 200%;
+            left: -2em;
+            z-index:-1;
+            
+            height: 100%;
+            transform: rotate(2.5deg);
+        }
+        ul{
+            text-align: center;
+            display: flex;
+            
+            position: relative;
+            top:3em;
+            li:not(.follow-us){
+                display: grid;
+                position: relative;
+                top:-2em;
+                h2{
+                    position: relative;
+                    top:2em;
+                }
+                p , a{
+                    font-family: 'Indie flower';
+                    color: #FFFFFF;
+                    font-size: 43px;
+                }
+                a{
+                    z-index: 50;
+                    text-decoration: none;  
+                    position: relative;
+                    top:-1em;
+                    cursor: pointer;
+                }
+            }
+            .follow-us{
+                display: flex;
+                position: relative;
+                top:9em;
+
+                a{
+                    margin-left:1em;
+                    margin-top: 2.7em;
+                     
+                    position: relative;
+                }
+            }
+            
+            li:not(.support-us){
+                margin-left: 11em;
+                
+            }
+            h2{
+                font-family: 'Kaushan Script';
+                color:#FFFFFF;
+                font-weight: 400;
+                font-size: 43px;
+                
+
+            }
+        }
+    }
+}

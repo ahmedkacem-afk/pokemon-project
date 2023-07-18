@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Imprima&family=Indie+Flower&family=Kaushan+Script&display=swap");
+body {
+  width: 95%;
+  margin-left: 2em;
+  margin-top: 4em;
+}
+
+.pointer-class {
+  cursor: pointer;
+}
+
+.navbar .container {
+  background: rgba(0, 0, 0, 0.8117647059);
+  padding-top: 1.5em;
+  padding-bottom: 6em;
+  overflow: hidden;
+  position: relative;
+}
+.navbar .container::before {
+  content: "";
+  position: absolute;
+  top: 12em;
+  background: pink;
+  width: 250%;
+  left: -2em;
+  z-index: 10em;
+  height: 100%;
+  transform: rotate(2.5deg);
+}
+.navbar .container ul {
+  display: flex;
+}
+.navbar .container ul li {
+  list-style: none;
+  position: relative;
+  left: 69%;
+}
+.navbar .container ul li a {
+  margin-left: 1em;
+  text-decoration: none;
+  font-family: "Indie Flower";
+  font-size: 48px;
+}
+.navbar .container ul li .sign-in {
+  color: #FFFFFF;
+}
+.navbar .container ul li .log-in {
+  color: #FFFFFF;
+  background: #117AA9;
+  border-radius: 30%;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
+.hero {
+  text-align: center;
+}
+.hero .container {
+  position: relative;
+  background-image: url(../photos/Rectangle\ 3.png);
+  background-size: 156.1%;
+  background-position: 5em auto;
+  background-repeat: no-repeat;
+  margin-top: -7.5%;
+  z-index: 50;
+  text-align: center;
+  padding: 14em;
+}
+.hero .container li {
+  list-style: none;
+}
+.hero .container .poke-name {
+  background: rgba(137, 194, 63, 0.6588235294);
+  border-radius: 35%;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+.hero .container .poke-name ul {
+  display: grid;
+}
+.hero .container .poke-name .give-name {
+  display: grid;
+  background: rgba(255, 255, 255, 0.66);
+  border-radius: 38%;
+  margin-left: 10em;
+  margin-bottom: 3em;
+  margin-right: 10em;
+}
+.hero .container .poke-name .give-name input {
+  width: 30%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  left: 16.5em;
+  top: 0.4em;
+  border: none;
+}
+.hero .container .poke-name .give-name input::-moz-placeholder {
+  font-family: "Imprima";
+  color: rgba(0, 0, 0, 0.4588235294);
+}
+.hero .container .poke-name .give-name input::placeholder {
+  font-family: "Imprima";
+  color: rgba(0, 0, 0, 0.4588235294);
+}
+.hero .container .poke-name .give-name button {
+  width: 10%;
+  padding: 0;
+  background: none;
+  border: none;
+  position: relative;
+  left: 21em;
+  top: 1em;
+  cursor: pointer;
+}
+.hero .container .poke-name h1 {
+  color: #000;
+  font-family: "Indie Flower";
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.hero .container .poke-name p {
+  font-family: "Indie flower";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact .container {
+  margin-top: -10%;
+  background: rgba(0, 0, 0, 0.8117647059);
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  padding-bottom: 2.1em;
+}
+.contact .container::before {
+  content: "";
+  position: absolute;
+  top: -20em;
+  background: pink;
+  width: 200%;
+  left: -2em;
+  z-index: -1;
+  height: 100%;
+  transform: rotate(2.5deg);
+}
+.contact .container ul {
+  text-align: center;
+  display: flex;
+  position: relative;
+  top: 3em;
+}
+.contact .container ul li:not(.follow-us) {
+  display: grid;
+  position: relative;
+  top: -2em;
+}
+.contact .container ul li:not(.follow-us) h2 {
+  position: relative;
+  top: 2em;
+}
+.contact .container ul li:not(.follow-us) p, .contact .container ul li:not(.follow-us) a {
+  font-family: "Indie flower";
+  color: #FFFFFF;
+  font-size: 43px;
+}
+.contact .container ul li:not(.follow-us) a {
+  z-index: 50;
+  text-decoration: none;
+  position: relative;
+  top: -1em;
+  cursor: pointer;
+}
+.contact .container ul .follow-us {
+  display: flex;
+  position: relative;
+  top: 9em;
+}
+.contact .container ul .follow-us a {
+  margin-left: 1em;
+  margin-top: 2.7em;
+  position: relative;
+}
+.contact .container ul li:not(.support-us) {
+  margin-left: 11em;
+}
+.contact .container ul h2 {
+  font-family: "Kaushan Script";
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 43px;
+}/*# sourceMappingURL=style.css.map */
