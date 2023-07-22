@@ -88,23 +88,23 @@ body{
             }
             .give-name{
                 display: grid;
+                grid-template-columns:min-content;
                 background:rgba(255, 255, 255, 0.66); 
                 border-radius: 38%;
                 margin-left:10em;
                 margin-bottom:3em ;
                 margin-right: 10em;
-              
+                form{
+                    position: relative;
+                    left: 14em;
+                    top: .5em;
+                }
                 input{
-                    width: 30%;
-                    text-align: center;
-                    background: rgba(255, 255, 255, 0.3);
-                    position:relative;
-                    left: 16.5em;
-                    top: .4em;
-                    border: none;
+                   text-align: center;
                     &::placeholder{
                         font-family: 'Imprima';
                         color: #00000075;
+                        text-align: center;
                     }
                 
                 }
@@ -113,9 +113,7 @@ body{
                     padding:0;
                     background: none;
                     border: none;
-                    position: relative;
-                    left:21em;
-                    top:1em;
+                    margin-left: -4em;
                     cursor: pointer;
                 }
                 

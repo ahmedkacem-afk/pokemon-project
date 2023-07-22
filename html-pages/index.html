@@ -26,12 +26,19 @@
                     </li>
                     <li>
                         <div class="give-name">
-                            <input type="text" placeholder="Exemple">
-                            <button >
-                                <img src="../photos/poké-ball.svg" alt="button">
-                            </button>   
-                            <p>Click the ball to find</p>
-                        </div>
+                            <form  class="form">
+                                <input name="poke-name" type="text" placeholder="Exemple" id="nameInput" list="pokemon">
+                                <datalist id="pokemon">
+
+                                </datalist>
+
+                                <button class="poke-button">
+                                    <img src="../photos/poké-ball.svg" alt="button">
+                                </button> 
+                        
+                                <p>Click the ball to find</p>
+                            </form>  
+                    </div>
                     </li>
     
                 </ul>   
@@ -69,6 +76,30 @@
             </ul>
         </div>
     </section>
+    <script>
+        const formEL =document.querySelector('.form');
+        formEL.addEventListener('click', event => {
+            event.preventDefault();
+            const formData= new  FormData(formEL);
+             console.log(formData.get('poke-name'));
+    
+      });
+        fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+  .then(res => {
+    return res.json();
+  })
+  .then(data => {
+    data.results.forEach(poke => {
+      const markup = `<option value="${poke.name}">`;
+      document.querySelector('datalist').insertAdjacentHTML('beforeend', markup);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
+  
+
+    </script>
     
 </body>
 </html>

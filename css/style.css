@@ -82,37 +82,37 @@ body {
 }
 .hero .container .poke-name .give-name {
   display: grid;
+  grid-template-columns: min-content;
   background: rgba(255, 255, 255, 0.66);
   border-radius: 38%;
   margin-left: 10em;
   margin-bottom: 3em;
   margin-right: 10em;
 }
-.hero .container .poke-name .give-name input {
-  width: 30%;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.3);
+.hero .container .poke-name .give-name form {
   position: relative;
-  left: 16.5em;
-  top: 0.4em;
-  border: none;
+  left: 14em;
+  top: 0.5em;
+}
+.hero .container .poke-name .give-name input {
+  text-align: center;
 }
 .hero .container .poke-name .give-name input::-moz-placeholder {
   font-family: "Imprima";
   color: rgba(0, 0, 0, 0.4588235294);
+  text-align: center;
 }
 .hero .container .poke-name .give-name input::placeholder {
   font-family: "Imprima";
   color: rgba(0, 0, 0, 0.4588235294);
+  text-align: center;
 }
 .hero .container .poke-name .give-name button {
   width: 10%;
   padding: 0;
   background: none;
   border: none;
-  position: relative;
-  left: 21em;
-  top: 1em;
+  margin-left: -4em;
   cursor: pointer;
 }
 .hero .container .poke-name h1 {
