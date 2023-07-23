@@ -66,7 +66,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   position: relative;
-  top: -6.8em;
   z-index: 50;
   text-align: center;
   padding: 14em;
@@ -136,7 +135,6 @@ body {
   background: rgba(0, 0, 0, 0.8117647059);
   overflow: hidden;
   position: relative;
-  top: -6.8em;
   z-index: 4;
   padding-bottom: 2.1em;
 }
