@@ -11,12 +11,20 @@
       <div class="container">
         <div class="hero-left">
             <ul>
-                <li><p>Pokémon name:</p></li>
-                <li><p>type:</p>
-
+                <li class="name">
+                  <h2>Pokémon name <span>:</span></h2>
                 </li>
-                <li><p>abilities:</p></li>
-                <li><p>stats:</p>
+                <li class="type">
+                  <h2>type<span>:</span></h2>
+                </li>
+                <li class="abilitiesA">
+                  <h2>abilities<span>:</span></h2>
+                  <div class="abilities">
+                    
+                  </div>
+                </li>
+                <li class="statsA">
+                  <h2>stats<span>:</span></h2>
                   <div class="stats">
                     
                   </div>
@@ -26,16 +34,70 @@
         </div>
         <div class="hero-right">
           <div class="photo-holder">
-            <img src="" alt="">
+           
           </div>
           <div class="height-weight">
             
-            <p>height:</p>
-            <p>weight:</p>
+           <div class="height">
+             <p>height:</p>
+            </div>
+            <div class="weight">
+              <p>weight:</p>
+            </div>
           </div>
+          
         </div>
+        
       </div>
+    <a href="./index.html">  <button class="another-poke">choose another pokemon</button></a>
     </section>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const receivedData = params.get('data');
+    
+      
+      fetch(receivedData)
+      .then(res =>{ return res.json()})
+      .then(data => {
+        const sprite = data.sprites;
+        console.log(data);
+        const image1 = `<img src="${sprite.back_default}" alt="${data.name} back_default">`;
+        const image2 = `<img src="${sprite.back_shiny}" alt="${data.name} back_shiny">`;
+        const image3 = `<img src="${sprite.front_default}" alt="${data.name} front_default">`;
+        const image4 = `<img src="${sprite.front_shiny}" alt="${data.name} front_shiny">`;
+        
+        const images = image1 + image2 + image3 + image4;
+        document.querySelector('.photo-holder').insertAdjacentHTML('beforeend', images);
+        const pokeName = `<p>${data.name}</p>`;
+        document.querySelector('.name').insertAdjacentHTML('beforeend', pokeName);
+        data.types.forEach(typePoke =>{
+          const pokeType = `<p>${typePoke.type.name}</p>`;
+          document.querySelector('.type').insertAdjacentHTML('beforeend', pokeType);
+
+        })
+        data.abilities.forEach(abilityPoke =>{
+          const pokeAbility = `<p>${abilityPoke.ability.name}</p>`;
+          document.querySelector('.abilities').insertAdjacentHTML('beforeend', pokeAbility);
+
+        })
+        const height = `<p>${data.height}</p>`;
+        document.querySelector('.height').insertAdjacentHTML('beforeend', height);
+
+        const weight = `<p>${data.weight}</p>`;
+        document.querySelector('.weight').insertAdjacentHTML('beforeend', weight);
+        data.stats.forEach( statPoke => {
+          const pokeStat = `<p><span>${statPoke.stat.name} :</span> ${statPoke.base_stat}</p>`;
+          
+          const pokeStats = `<div class="${statPoke.stat.name}">${pokeStat} </div>`;
+          document.querySelector('.stats').insertAdjacentHTML('beforeend',pokeStats);
+          
+        }  )
+      })
+      .catch(error =>{
+        console.log(error);
+      });
+     
+    </script>
     
 </body>
 

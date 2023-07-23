@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Imprima&family=Indie+Flower&family=Itim&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imprima&family=Indie+Flower&family=Itim&family=Kalam&family=Kaushan+Script&display=swap");
 body {
   background: whitesmoke;
 }
@@ -16,11 +16,10 @@ body {
 }
 .hero .hero-left {
   position: relative;
-  padding-right: 30em;
+  padding-right: 10em;
   z-index: 1;
   background: rgba(171, 208, 83, 0.62);
-  left: -4em;
-  padding-bottom: 12em;
+  left: -6em;
   top: -6em;
   border-radius: 75px;
   border: 3px solid #54B572;
@@ -28,10 +27,22 @@ body {
 .hero .hero-left ul {
   width: 200%;
 }
+.hero .hero-left li:not(.abilitiesA, .statsA) {
+  display: flex;
+}
+.hero .hero-left li:not(.statsA) p {
+  font-size: 40px;
+}
 .hero .hero-left li {
   list-style: none;
 }
 .hero .hero-left li p {
+  color: rgba(255, 0, 0, 0.65);
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: "Kalam";
+  text-indent: 1em;
+}
+.hero .hero-left li h2 {
   color: #000;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   text-transform: capitalize;
@@ -39,11 +50,15 @@ body {
   font-family: "Itim";
   font-size: 40px;
   font-weight: 600;
-  line-height: 2em;
+  line-height: 1.5em;
+}
+.hero .hero-left li h2 span {
+  font-size: 60px;
+  margin-left: 0.2em;
 }
 .hero .hero-right {
   display: grid;
-  margin-left: 10em;
+  margin-left: 7em;
   z-index: 5;
 }
 .hero .hero-right .photo-holder {
@@ -54,9 +69,15 @@ body {
   margin-left: 1em;
   position: relative;
   top: -5em;
-  left: -2.5em;
-  width: 120%;
-  height: 100%;
+  left: -6.5em;
+  width: 140%;
+  height: 60%;
+}
+.hero .hero-right .photo-holder img {
+  width: 40%;
+  position: inherit;
+  left: 2.5em;
+  top: 2em;
 }
 .hero .hero-right .height-weight {
   border-radius: 50px;
@@ -67,13 +88,64 @@ body {
   padding-right: 1em;
   height: 20%;
   align-items: center;
-  margin-bottom: 5em;
+  margin-top: -15em;
+  margin-left: -4em;
 }
 .hero .hero-right .height-weight p {
+  text-indent: 1em;
   text-align: left;
-  text-indent: 5em;
   position: relative;
-  left: -3em;
+  left: 1em;
   font-family: "Itim";
   text-transform: capitalize;
+}
+
+.height {
+  display: flex;
+}
+
+.weight {
+  display: flex;
+  margin-left: 5em;
+  padding-right: 3em;
+}
+
+.abilitiesA {
+  display: grid;
+}
+.abilitiesA .abilities {
+  display: flex;
+  position: relative;
+  top: -4em;
+  left: -2.5em;
+}
+
+.statsA {
+  position: relative;
+  top: -7em;
+  display: grid;
+}
+.statsA .stats {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+}
+.statsA .stats span {
+  font-size: 35px;
+  color: #000;
+}
+.statsA .stats p {
+  font-size: larger;
+  font-weight: 900;
+}
+
+button {
+  position: relative;
+  z-index: 50;
+  top: -48em;
+  left: 85em;
+  width: 10%;
+  background-color: white;
+  cursor: pointer;
+  border: 4px solid red;
+  border-radius: 25px;
 }/*# sourceMappingURL=poke.css.map */

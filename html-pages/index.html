@@ -27,7 +27,7 @@
                     <li>
                         <div class="give-name">
                             <form  class="form">
-                                <input name="poke-name" type="text" placeholder="Exemple" id="nameInput" list="pokemon">
+                                <input name="poke-name" type="text" placeholder="Example:bulbasaur" id="nameInput" list="pokemon">
                                 <datalist id="pokemon">
 
                                 </datalist>
@@ -78,12 +78,7 @@
     </section>
     <script>
         const formEL =document.querySelector('.form');
-        formEL.addEventListener('click', event => {
-            event.preventDefault();
-            const formData= new  FormData(formEL);
-             console.log(formData.get('poke-name'));
-    
-      });
+   
         fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
   .then(res => {
     return res.json();
@@ -92,12 +87,26 @@
     data.results.forEach(poke => {
       const markup = `<option value="${poke.name}">`;
       document.querySelector('datalist').insertAdjacentHTML('beforeend', markup);
+
+    });
+   
+    formEL.addEventListener('submit', event => {
+        event.preventDefault();
+        
+        const formData= new  FormData(formEL);
+        const collectData= formData.get('poke-name');
+        const dataToSend = data.results.find(pokemon => pokemon.name === collectData);
+        console.log(dataToSend.url);
+        const destinationURL = `./view-pokemon.html?data=${encodeURIComponent(dataToSend.url)}`;
+         window.location.href = destinationURL;
+       
     });
   })
+  
   .catch(error => {
     console.log(error);
   });
-  
+ 
 
     </script>
     
