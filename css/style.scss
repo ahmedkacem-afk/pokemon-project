@@ -2,7 +2,7 @@
 body{
    width: 95%;
    margin-left: 2em;
-   margin-top: 4em;
+   
 
     
 }
@@ -17,6 +17,7 @@ body{
         padding-bottom: 6em;
         overflow: hidden;
         position: relative;
+        top: 6.7em;
         &::before{
             content: "";
             position: absolute;
@@ -142,12 +143,13 @@ body{
 .contact{
    
     .container{
-        margin-top: -10%;
+        
         background: #000000CF;
         overflow: hidden;
         position: relative;
         z-index: 4;
         padding-bottom: 2.1em;
+        top: -9em;
           
         &::before{
             content: "";

@@ -2,7 +2,6 @@
 body {
   width: 95%;
   margin-left: 2em;
-  margin-top: 4em;
 }
 
 .pointer-class {
@@ -15,6 +14,7 @@ body {
   padding-bottom: 6em;
   overflow: hidden;
   position: relative;
+  top: 6.7em;
 }
 .navbar .container::before {
   content: "";
@@ -131,12 +131,12 @@ body {
 }
 
 .contact .container {
-  margin-top: -10%;
   background: rgba(0, 0, 0, 0.8117647059);
   overflow: hidden;
   position: relative;
   z-index: 4;
   padding-bottom: 2.1em;
+  top: -9em;
 }
 .contact .container::before {
   content: "";
