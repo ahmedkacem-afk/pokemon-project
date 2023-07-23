@@ -11,6 +11,7 @@ body{
 }
 .navbar{
     .container{
+        
         background:#000000CF ;
         padding-top: 1.5em;
         padding-bottom: 6em;
@@ -68,10 +69,11 @@ body{
         background-size: 157%;
         background-position:5em auto;
         background-repeat: no-repeat;
-        margin-top: -7.5%;
-        box-sizing:content-box;
-        
-        padding: 0;
+        margin:0;
+        box-sizing:border-box;
+
+        position: relative;
+        top:-6.8em;
         z-index: 50;
 
         text-align: center;
@@ -145,6 +147,7 @@ body{
         background: #000000CF;
         overflow: hidden;
         position: relative;
+        top: -6.8em;
         z-index: 4;
         padding-bottom: 2.1em;
           
