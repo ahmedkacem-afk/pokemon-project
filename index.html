@@ -97,7 +97,7 @@
         const collectData= formData.get('poke-name');
         const dataToSend = data.results.find(pokemon => pokemon.name === collectData);
         console.log(dataToSend.url);
-        const destinationURL = `./view-pokemon.html?data=${encodeURIComponent(dataToSend.url)}`;
+        const destinationURL = `./html-pages/view-pokemon.html?data=${encodeURIComponent(dataToSend.url)}`;
          window.location.href = destinationURL;
        
     });
